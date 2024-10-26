@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Menu{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+        <h1>Меню</h1>
+        {% endblock %}
+    </header>
+
+    <nav>
+        {% block menu %}
+            <h3><a href='http://127.0.0.1:8000/platform/'>Главная</a></h3>
+            <h3><a href='http://127.0.0.1:8000/platform/games/'>Магазин</a></h3>
+            <h3><a href='http://127.0.0.1:8000/platform/cart/'>Корзина</a></h3>
+        {% endblock %}
+    </nav>
+
+    <main>
+        {% block content %}
+            <p>Content</p>
+        {% endblock %}
+    </main>
+
+</body>
+</html>

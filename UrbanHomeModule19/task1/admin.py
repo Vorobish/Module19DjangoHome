@@ -1,3 +1,11 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+
+@admin.register(Buyer)
+class BuyerAdmin(admin.ModelAdmin):
+    list_display = ('name', 'balance', 'age',)
+    list_filter = ('price')
+
+# python manage.py createsuperuser
+# python manage.py shell

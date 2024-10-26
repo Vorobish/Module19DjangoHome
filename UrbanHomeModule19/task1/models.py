@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Bayer(models.Model):
+class Buyer(models.Model):
     name = models.CharField(max_length=100)
     balance = models.DecimalField(decimal_places=2, max_digits=50000)
     age = models.IntegerField()
@@ -16,7 +16,7 @@ class Game(models.Model):
     size = models.DecimalField(decimal_places=2, max_digits=1024)
     description = models.TextField()
     age_limited = models.BooleanField(default=False)
-    buyer = models.ManyToManyField(Bayer, related_name='buyers')
+    buyer = models.ManyToManyField(Buyer, related_name='buyers')
 
 
 # python manage.py makemigrations

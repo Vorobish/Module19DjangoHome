@@ -21,3 +21,7 @@ class Game(models.Model):
 
 # python manage.py makemigrations
 # python manage.py migrate
+# python manage.py shell
+# Buyer.objects.create(name='Ilya', balance=1500.05, age=24)
+# Game.objects.create(title='Cyberpunk 2077', cost=31, size=46.2, description='Game of the year', age_limited=True)
+# Game.objects.get(id=1).buyer.set((1, 2))
